@@ -1,0 +1,12 @@
+{
+  "name": "cc-toys",
+  "description": "A small collection of Claude Code plugins: independent skills and tools, install only what you want",
+  "owner": { "name": "Mikhail Butvin" },
+  "plugins": [
+    {
+      "name": "user-story",
+      "source": "./plugins/user-story",
+      "description": "Roleplay invented personas exploring your repo, docs, API, or UI and narrate their lived experience as present-tense stories, surfacing real UX and onboarding friction"
+    }
+  ]
+}
