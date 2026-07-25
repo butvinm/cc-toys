@@ -1,0 +1,9 @@
+{
+  "name": "user-story",
+  "description": "Roleplay invented personas exploring your repo, docs, API, or UI and narrate their lived experience as present-tense stories, surfacing real UX and onboarding friction",
+  "version": "1.0.0",
+  "author": { "name": "Mikhail Butvin" },
+  "homepage": "https://github.com/butvinm/cc-toys",
+  "repository": "https://github.com/butvinm/cc-toys",
+  "license": "MIT"
+}
