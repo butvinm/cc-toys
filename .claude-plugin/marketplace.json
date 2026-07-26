@@ -1,6 +1,6 @@
 {
   "name": "cc-toys",
-  "description": "Personal collection of Claude Code skills. Currently: user-story - persona-driven walkthroughs that surface UX and onboarding friction in repos, docs, and UIs",
+  "description": "Personal collection of Claude Code skills",
   "owner": { "name": "Mikhail Butvin" },
   "plugins": [
     {
