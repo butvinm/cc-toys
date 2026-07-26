@@ -1,6 +1,6 @@
 {
   "name": "cc-toys",
-  "description": "Personal collection of Claude Code skills",
+  "description": "Collection of the Claude Code tools I use every day",
   "owner": { "name": "Mikhail Butvin" },
   "plugins": [
     {
