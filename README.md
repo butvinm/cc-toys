@@ -29,14 +29,6 @@ Trigger it with prompts like:
 - "Is the onramp any good?"
 - "Review these docs from the point of view of a time-pressed senior engineer"
 
-**Manual install** (without the marketplace): copy the skill into your user skills directory.
-
-```bash
-cp -r plugins/user-story/skills/user-story ~/.claude/skills/
-```
-
-The skill is self-contained (no bundled scripts or references), so no path fixups are needed after copying.
-
 ## License
 
 MIT
