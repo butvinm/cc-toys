@@ -1,6 +1,6 @@
 # cc-toys
 
-A small collection of Claude Code plugins I actually use. Each plugin is independent - install only what you want.
+Claude Code skills I use in my own work, packaged as plugins. Currently one: user-story.
 
 ## Install
 
