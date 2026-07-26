@@ -1,6 +1,6 @@
 # cc-toys
 
-Personal collection of Claude Code skills, packaged as plugins.
+Collection of the Claude Code tools I use every day, packaged as plugins.
 
 ## Install
 
