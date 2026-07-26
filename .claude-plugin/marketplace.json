@@ -1,6 +1,6 @@
 {
   "name": "cc-toys",
-  "description": "A small collection of Claude Code plugins: independent skills and tools, install only what you want",
+  "description": "Personal collection of Claude Code skills. Currently: user-story - persona-driven walkthroughs that surface UX and onboarding friction in repos, docs, and UIs",
   "owner": { "name": "Mikhail Butvin" },
   "plugins": [
     {
