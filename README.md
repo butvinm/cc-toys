@@ -20,14 +20,7 @@ Then install any plugin from it:
 
 ### user-story
 
-Roleplay invented personas exploring your repo, docs, API, or UI and narrate their lived experience as present-tense stories, surfacing the friction a plain AI review slips past. Each persona arrives with a real goal and a real knowledge ceiling, and every complaint is fact-checked against the actual artifact - so you learn where people get confused, what delights them, and where they give up.
-
-Trigger it with prompts like:
-
-- "Walk through this repo as a user story"
-- "How does this README read to a newcomer?"
-- "Is the onramp any good?"
-- "Review these docs from the point of view of a time-pressed senior engineer"
+Roleplay invented personas exploring your repo, docs, API, or UI and narrate their lived experience as present-tense stories, surfacing the friction a plain AI review slips past. Try: "How does this README read to a newcomer?" or "Review these docs as a time-pressed senior engineer".
 
 <details>
 <summary>Example output: a real user-story run</summary>
