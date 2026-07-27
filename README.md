@@ -10,19 +10,28 @@ Add the marketplace once:
 /plugin marketplace add butvinm/cc-toys
 ```
 
-Then install any plugin from it:
+Then install the plugins you want:
 
 ```
 /plugin install user-story@cc-toys
+/plugin install workflow@cc-toys
 ```
 
-## Plugins
+### Updating
 
-### user-story
+- `/plugin` -> Marketplaces -> **Update marketplace** pulls the latest catalog from this repo immediately - the reliable path.
+- `/plugin` -> Installed -> **Update now** uses a local cache that can lag behind; use it as a fallback after updating the marketplace.
+- `/plugin` -> Marketplaces -> **Enable auto-update** refreshes the catalog on each session start.
+
+## user-story (plugin)
 
 Helps you see your repo, docs, API, or UI from your users' perspective.
 
-It invents personas - a rushed newcomer, a skeptical senior, a gatekeeper deciding your fate - has them explore the real thing, and narrates their experience as present-tense stories, surfacing the friction a plain AI review slips past.
+### user-story (skill)
+
+`/user-story:user-story <target>`
+
+Invents personas - a rushed newcomer, a skeptical senior, a gatekeeper deciding your fate - has them explore the real thing, and narrates their experience as present-tense stories, surfacing the friction a plain AI review slips past.
 
 Try: "How does this README read to a newcomer?" or "Review these docs as a time-pressed senior engineer".
 
@@ -44,6 +53,22 @@ _Real output of a run against [cc-grammar-coach](https://github.com/butvinm/cc-g
 > She sits back. The install itself — two paste commands, one configure command — she is sure she can do alone; the README is honest about the steps. The thing she cannot do is _have_ the thing it needs, and nowhere in the repo does anyone say where people get it. "Shikata nai." She bookmarks the page and types into her notes app: "Senpai — cc-grammar-coach, what do you put in llm_base_url? Did you pay OpenAI, or does our Claude work?" Lunch is over. The plugin waits on one question the README never answers.
 
 </details>
+
+## workflow (plugin)
+
+Small helpers for the Claude Code workflow itself, such as session management and skill-activation reminders.
+
+### move-session (skill)
+
+`/workflow:move-session`
+
+Moves, copies, or symlinks Claude Code sessions between project directories in `~/.claude/projects` - for worktrees, relocated repos, and multirepo setups.
+
+### skill-reminder (hook)
+
+UserPromptSubmit, needs `jq`.
+
+Before every prompt, nudges Claude to check and activate relevant skills instead of just mentioning them.
 
 ## License
 
