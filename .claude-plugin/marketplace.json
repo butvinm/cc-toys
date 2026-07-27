@@ -6,7 +6,7 @@
     {
       "name": "user-story",
       "source": "./plugins/user-story",
-      "description": "Roleplay invented personas exploring your repo, docs, API, or UI and narrate their lived experience as present-tense stories, surfacing real UX and onboarding friction"
+      "description": "Roleplay invented personas exploring your repo, docs, API, or UI and narrate their lived experience as present-tense stories, surfacing the friction a plain AI review slips past"
     }
   ]
 }
