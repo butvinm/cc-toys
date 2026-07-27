@@ -66,7 +66,7 @@ Invoke with `/workflow:move-session` or prompts like "Move my sessions from the 
 
 Makes skill activation reliable: Claude often knows a relevant skill exists and still answers without invoking it, so this hook reminds it before every prompt to actually activate what applies.
 
-Runs on UserPromptSubmit; needs `jq`.
+Runs on UserPromptSubmit.
 
 ## License
 
