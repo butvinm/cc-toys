@@ -20,7 +20,7 @@ Then install any plugin from it:
 
 ### user-story
 
-Evaluates an artifact - a repo, API, UI, docs site, code module, onboarding flow - through the eyes of invented personas. Ask an AI to "review this" and you get an omniscient reader with no goal, no arrival path, and no point where it gives up - it slips past exactly the problems a real person bumps into. This skill forces the human view instead: it invents 1-3 believable people with concrete goals and knowledge ceilings, has each explore the real thing in parallel, fact-checks every complaint against the actual artifact, and returns present-tense stories of their lived experience: where they got confused, what delighted them, where they gave up.
+Roleplay invented personas exploring your repo, docs, API, or UI and narrate their lived experience as present-tense stories, surfacing the friction a plain AI review slips past. Each persona arrives with a real goal and a real knowledge ceiling, and every complaint is fact-checked against the actual artifact - so you learn where people get confused, what delights them, and where they give up.
 
 Trigger it with prompts like:
 
