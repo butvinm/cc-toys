@@ -66,9 +66,9 @@ Moves, copies, or symlinks Claude Code sessions between project directories in `
 
 ### skill-reminder (hook)
 
-UserPromptSubmit, needs `jq`.
+Makes skill activation reliable: Claude often knows a relevant skill exists and still answers without invoking it, so this hook reminds it before every prompt to actually activate what applies.
 
-Before every prompt, nudges Claude to check and activate relevant skills instead of just mentioning them.
+Runs on UserPromptSubmit; needs `jq`.
 
 ## License
 
