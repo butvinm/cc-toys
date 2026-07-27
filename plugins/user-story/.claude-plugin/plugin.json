@@ -1,6 +1,6 @@
 {
   "name": "user-story",
-  "description": "Roleplay invented personas exploring your repo, docs, API, or UI and narrate their lived experience as present-tense stories, surfacing the friction a plain AI review slips past",
+  "description": "Helps you see your repo, docs, API, or UI from your users' perspective. It invents personas - a rushed newcomer, a skeptical senior, a gatekeeper deciding your fate - has them explore the real thing, and narrates their experience as present-tense stories, surfacing the friction a plain AI review slips past",
   "version": "1.1.0",
   "author": { "name": "Mikhail Butvin" },
   "homepage": "https://github.com/butvinm/cc-toys",
