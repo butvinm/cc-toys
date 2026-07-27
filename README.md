@@ -29,11 +29,9 @@ Helps you see your repo, docs, API, or UI from your users' perspective.
 
 ### user-story (skill)
 
-`/user-story:user-story <target>`
-
 Invents personas - a rushed newcomer, a skeptical senior, a gatekeeper deciding your fate - has them explore the real thing, and narrates their experience as present-tense stories, surfacing the friction a plain AI review slips past.
 
-Try: "How does this README read to a newcomer?" or "Review these docs as a time-pressed senior engineer".
+Invoke with `/user-story:user-story <target>` or prompts like "How does this README read to a newcomer?" and "Review these docs as a time-pressed senior engineer".
 
 <details>
 <summary>Example output: a real user-story run</summary>
@@ -60,9 +58,9 @@ Small helpers for the Claude Code workflow itself, such as session management an
 
 ### move-session (skill)
 
-`/workflow:move-session`
-
 Moves, copies, or symlinks Claude Code sessions between project directories in `~/.claude/projects` - for worktrees, relocated repos, and multirepo setups.
+
+Invoke with `/workflow:move-session` or prompts like "Move my sessions from the old repo path" and "Share sessions between this worktree and the main checkout".
 
 ### skill-reminder (hook)
 
