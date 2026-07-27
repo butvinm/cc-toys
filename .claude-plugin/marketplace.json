@@ -7,6 +7,11 @@
       "name": "user-story",
       "source": "./plugins/user-story",
       "description": "Helps you see your repo, docs, API, or UI from your users' perspective. It invents personas - a rushed newcomer, a skeptical senior, a gatekeeper deciding your fate - has them explore the real thing, and narrates their experience as present-tense stories, surfacing the friction a plain AI review slips past"
+    },
+    {
+      "name": "workflow",
+      "source": "./plugins/workflow",
+      "description": "Small helpers for the Claude Code workflow itself, such as session management and skill-activation reminders"
     }
   ]
 }
