@@ -11,7 +11,7 @@
     {
       "name": "workflow",
       "source": "./plugins/workflow",
-      "description": "Small helpers for the Claude Code workflow itself, such as session management and skill-activation reminders"
+      "description": "Small helpers for the Claude Code workflow itself, such as skill-activation reminders"
     }
   ]
 }

@@ -54,13 +54,7 @@ _Real output of a run against [cc-grammar-coach](https://github.com/butvinm/cc-g
 
 ## workflow (plugin)
 
-Small helpers for the Claude Code workflow itself, such as session management and skill-activation reminders.
-
-### move-session (skill)
-
-Moves, copies, or symlinks Claude Code sessions between project directories in `~/.claude/projects` - for worktrees, relocated repos, and multirepo setups.
-
-Invoke with `/workflow:move-session` or prompts like "Move my sessions from the old repo path" and "Share sessions between this worktree and the main checkout".
+Small helpers for the Claude Code workflow itself, such as skill-activation reminders.
 
 ### skill-reminder (hook)
 

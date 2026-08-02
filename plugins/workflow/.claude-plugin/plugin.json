@@ -1,7 +1,7 @@
 {
   "name": "workflow",
-  "description": "Small helpers for the Claude Code workflow itself, such as session management and skill-activation reminders",
-  "version": "1.0.0",
+  "description": "Small helpers for the Claude Code workflow itself, such as skill-activation reminders",
+  "version": "2.0.0",
   "author": { "name": "Mikhail Butvin" },
   "homepage": "https://github.com/butvinm/cc-toys",
   "repository": "https://github.com/butvinm/cc-toys",
