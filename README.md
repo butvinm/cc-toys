@@ -77,6 +77,8 @@ Invoke with `new-worktree FEAT-123` from anywhere inside the repository. It bran
 
 Linked when present: `CLAUDE.md`, `.env`, `.mcp.json`, `.claude/skills`, `.claude/settings.json`, `.claude/settings.local.json`. Add repo-specific paths, one per line, in `.claude/worktree-link`.
 
+For worktrees you already created by hand, `new-worktree -l FEAT-123` links into one in place, leaving its checkout and uncommitted work alone.
+
 <details>
 <summary>Example output: a worktree for an ADC issue</summary>
 
