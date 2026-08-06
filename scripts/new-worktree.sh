@@ -14,7 +14,7 @@ DEFAULT_LINKS='CLAUDE.md
 
 usage() {
 	cat <<EOF
-Usage: $PROG [-b BASE] [-C REPO] [-n] BRANCH
+Usage: $PROG [-b BASE] [-C REPO] [-l] [-n] BRANCH
 
 Create a git worktree on BRANCH, link the repository's untracked local-only files into it, and open it in a new editor window.
 
@@ -23,6 +23,7 @@ A fresh worktree checks out tracked files only, so anything git-ignored - CLAUDE
 Options:
   -b BASE   base ref for the new branch (default: origin/HEAD, falling back to HEAD)
   -C REPO   repository to branch from (default: the repository containing the current directory)
+  -l        link into an existing worktree instead of creating one, for worktrees made before this script
   -n        do not open an editor; print the worktree path instead
   -h        show this help
 
@@ -48,11 +49,13 @@ die() {
 BASE=
 REPO=
 OPEN=1
+LINK_ONLY=0
 
-while getopts b:C:nh opt; do
+while getopts b:C:lnh opt; do
 	case $opt in
 	b) BASE=$OPTARG ;;
 	C) REPO=$OPTARG ;;
+	l) LINK_ONLY=1 ;;
 	n) OPEN=0 ;;
 	h)
 		usage
@@ -86,9 +89,13 @@ else
 fi
 
 WT="$REPO/.claude/worktrees/$BRANCH"
-[ -e "$WT" ] && die "worktree path already exists: $WT"
 
-if git -C "$REPO" show-ref --verify --quiet "refs/heads/$BRANCH"; then
+if [ "$LINK_ONLY" -eq 1 ]; then
+	[ -d "$WT" ] || die "no worktree at $WT; drop -l to create one"
+	git -C "$REPO" worktree list --porcelain | grep -qxF "worktree $WT" || die "$WT is not a registered worktree of $REPO"
+elif [ -e "$WT" ]; then
+	die "worktree path already exists: $WT; pass -l to link into it"
+elif git -C "$REPO" show-ref --verify --quiet "refs/heads/$BRANCH"; then
 	printf '%s: branch %s already exists, checking it out\n' "$PROG" "$BRANCH"
 	git -C "$REPO" worktree add "$WT" "$BRANCH"
 else
