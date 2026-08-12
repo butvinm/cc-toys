@@ -62,40 +62,6 @@ Makes skill activation reliable: Claude often knows a relevant skill exists and 
 
 Runs on UserPromptSubmit.
 
-## new-worktree (script)
-
-Makes a git worktree usable by Claude Code. A fresh worktree checks out tracked files only, so everything git-ignored - `CLAUDE.md`, `.claude/skills`, `.env` - is missing, and a session started there sees none of the project's skills or instructions. This script creates the worktree, symlinks those files back, and opens it in a new editor window, so an issue key becomes a ready branch in one command.
-
-No marketplace install: clone the repo and put the script on your `PATH`.
-
-```
-git clone https://github.com/butvinm/cc-toys ~/Dev/cc-toys
-ln -s ~/Dev/cc-toys/scripts/new-worktree.sh ~/.local/bin/new-worktree
-```
-
-Invoke with `new-worktree FEAT-123` from anywhere inside the repository. It branches from `origin/HEAD` (`-b` overrides), creates the worktree at `.claude/worktrees/FEAT-123` - the same location Claude Code's own worktree tool uses - and opens it with `zed -n`, or whatever `WORKTREE_EDITOR` is set to. Run `new-worktree -h` for the full options.
-
-Linked when present: `CLAUDE.md`, `.env`, `.mcp.json`, `.claude/skills`, `.claude/settings.json`, `.claude/settings.local.json`. Add repo-specific paths, one per line, in `.claude/worktree-link`.
-
-For worktrees you already created by hand, `new-worktree -l FEAT-123` links into one in place, leaving its checkout and uncommitted work alone.
-
-<details>
-<summary>Example output: a worktree for an ADC issue</summary>
-
-```
-$ new-worktree ADCAI-99
-Preparing worktree (new branch 'ADCAI-99')
-branch 'ADCAI-99' set up to track 'origin/develop'.
-HEAD is now at 33678ec [ADCAI-74] Set version 1.1.0
-new-worktree.sh: linked CLAUDE.md .env .claude/skills .claude/settings.json .claude/settings.local.json personal docs/plans
-new-worktree.sh: added personal docs/plans to .git/info/exclude
-
-$ ls .claude/worktrees/ADCAI-99/.claude/skills/
-adc  codestyle  commit  devstand  docs  mr  mr-review  pre-commit-review  teststyle
-```
-
-</details>
-
 ## License
 
 MIT
