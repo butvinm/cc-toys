@@ -1,7 +1,9 @@
 {
   "name": "cc-toys",
   "description": "Collection of the Claude Code tools I use every day",
-  "owner": { "name": "Mikhail Butvin" },
+  "owner": {
+    "name": "Mikhail Butvin"
+  },
   "plugins": [
     {
       "name": "user-story",
@@ -11,7 +13,7 @@
     {
       "name": "workflow",
       "source": "./plugins/workflow",
-      "description": "Small helpers for the Claude Code workflow itself, such as skill-activation reminders"
+      "description": "Small helpers for the Claude Code workflow itself, such as skill-activation reminders and worktree setup"
     }
   ]
 }

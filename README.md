@@ -54,13 +54,21 @@ _Real output of a run against [cc-grammar-coach](https://github.com/butvinm/cc-g
 
 ## workflow (plugin)
 
-Small helpers for the Claude Code workflow itself, such as skill-activation reminders.
+Small helpers for the Claude Code workflow itself, such as skill-activation reminders and worktree setup.
 
 ### skill-reminder (hook)
 
 Makes skill activation reliable: Claude often knows a relevant skill exists and still answers without invoking it, so this hook reminds it before every prompt to actually activate what applies.
 
 Runs on UserPromptSubmit.
+
+### worktree-setup (hook)
+
+Keeps a worktree session as capable as the one you left. A fresh worktree checks out tracked files only, so Claude starts there blind to the project's own skills and instructions; this copies them across as the worktree opens.
+
+Runs on PostToolUse for EnterWorktree. Copies `CLAUDE.md`, `.env`, `.mcp.json`, `.claude/skills`, and both `.claude/settings*.json` when the main worktree has them, never overwriting a file already there.
+
+Add your own paths - `personal`, `docs/personal` - when enabling the plugin. Anything a repo does not have is skipped, so one list covers every repo you work in.
 
 ## License
 
