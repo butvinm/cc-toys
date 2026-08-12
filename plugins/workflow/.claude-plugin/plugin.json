@@ -1,9 +1,19 @@
 {
   "name": "workflow",
-  "description": "Small helpers for the Claude Code workflow itself, such as skill-activation reminders",
-  "version": "2.0.0",
-  "author": { "name": "Mikhail Butvin" },
+  "description": "Small helpers for the Claude Code workflow itself, such as skill-activation reminders and worktree setup",
+  "version": "2.1.0",
+  "author": {
+    "name": "Mikhail Butvin"
+  },
   "homepage": "https://github.com/butvinm/cc-toys",
   "repository": "https://github.com/butvinm/cc-toys",
-  "license": "MIT"
+  "license": "MIT",
+  "userConfig": {
+    "extra_paths": {
+      "type": "string",
+      "multiple": true,
+      "title": "Extra paths to carry into worktrees",
+      "description": "Repo-relative git-ignored paths to copy on top of the defaults, such as personal or docs/personal. Paths missing from a repo are skipped, so one list works across all your repos."
+    }
+  }
 }
