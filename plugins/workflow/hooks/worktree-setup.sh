@@ -1,18 +1,7 @@
 #!/bin/sh
 set -eu
 
-CARRY='CLAUDE.md
-.env
-.mcp.json
-.claude/skills
-.claude/settings.json
-.claude/settings.local.json'
-
-extra=$(printf '%s' "${CLAUDE_PLUGIN_OPTION_EXTRA_PATHS:-}" | tr -d '[]"' | tr ',' '\n')
-if [ -n "$extra" ]; then
-	CARRY="$CARRY
-$extra"
-fi
+CARRY=$(printf '%s' "${CLAUDE_PLUGIN_OPTION_CARRY_PATHS:-}" | tr ',' '\n')
 
 input=$(cat)
 
