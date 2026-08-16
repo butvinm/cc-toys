@@ -1,7 +1,7 @@
 {
   "name": "workflow",
   "description": "Small helpers for the Claude Code workflow itself, such as skill-activation reminders and worktree setup",
-  "version": "2.1.0",
+  "version": "3.0.0",
   "author": {
     "name": "Mikhail Butvin"
   },
@@ -9,11 +9,11 @@
   "repository": "https://github.com/butvinm/cc-toys",
   "license": "MIT",
   "userConfig": {
-    "extra_paths": {
+    "carry_paths": {
       "type": "string",
       "multiple": true,
-      "title": "Extra paths to carry into worktrees",
-      "description": "Repo-relative git-ignored paths to copy on top of the defaults, such as personal or docs/personal. Paths missing from a repo are skipped, so one list works across all your repos."
+      "title": "Paths to carry into worktrees",
+      "description": "Repo-relative paths to copy from the main checkout into a new worktree. Nothing is carried until you list something here. A good starting set is CLAUDE.md, .env, .mcp.json, .claude/skills, .claude/settings.json, .claude/settings.local.json, plus your own such as personal or docs/personal. Paths missing from a repo are skipped, so one list works across all your repos."
     }
   }
 }
