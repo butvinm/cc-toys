@@ -66,7 +66,9 @@ Runs on UserPromptSubmit.
 
 Keeps a worktree session as capable as the one you left. A fresh worktree checks out tracked files only, so Claude starts there blind to the project's own skills and instructions; this copies them across as the worktree opens.
 
-Runs on PostToolUse for EnterWorktree. Copies the paths you list when enabling the plugin, never overwriting a file already there. Nothing is carried until you list something: a good starting set is `CLAUDE.md`, `.env`, `.mcp.json`, `.claude/skills`, both `.claude/settings*.json`, and your own such as `personal` or `docs/personal`. Anything a repo does not have is skipped, so one list covers every repo you work in.
+Runs on PostToolUse for EnterWorktree. You give it two lists when enabling the plugin, and nothing is carried until you do. Paths you copy give the worktree its own version, so edits there stay there - `.env` and anything else you may tune for one branch. Paths you symlink stay live: the worktree always sees the current file and edits write back to the main checkout - `.claude/skills`, both `.claude/settings*.json`, `personal` notes. Neither ever overwrites a file already in the worktree, and anything a repo does not have is skipped, so one pair of lists covers every repo you work in.
+
+A git-ignore pattern matches a symlink only when written without a trailing slash - `personal`, not `personal/` - so the hook checks each link and tells you when one lands unignored and will show up as untracked.
 
 ## License
 
