@@ -11,7 +11,7 @@
       {
         "matcher": "EnterWorktree",
         "hooks": [
-          { "type": "command", "command": "\"${CLAUDE_PLUGIN_ROOT}\"/hooks/worktree-setup.sh", "timeout": 30 }
+          { "type": "command", "command": "\"${CLAUDE_PLUGIN_ROOT}\"/hooks/worktree-sync.sh", "timeout": 30 }
         ]
       }
     ]
