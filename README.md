@@ -62,7 +62,7 @@ Makes skill activation reliable: Claude often knows a relevant skill exists and 
 
 Runs on UserPromptSubmit.
 
-### worktree-setup (hook)
+### worktree-sync (hook)
 
 Keeps a worktree session as capable as the one you left. A fresh worktree checks out tracked files only, so Claude starts there blind to the project's own skills and instructions; this copies them across as the worktree opens.
 

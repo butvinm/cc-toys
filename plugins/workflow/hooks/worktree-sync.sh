@@ -133,4 +133,4 @@ if [ -z "$msg" ]; then
 	exit 0
 fi
 
-printf '{"systemMessage":"worktree-setup: %s","suppressOutput":true}\n' "${msg% }"
+printf '{"systemMessage":"worktree-sync: %s","suppressOutput":true}\n' "${msg% }"
