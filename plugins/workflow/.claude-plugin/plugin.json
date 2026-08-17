@@ -9,11 +9,17 @@
   "repository": "https://github.com/butvinm/cc-toys",
   "license": "MIT",
   "userConfig": {
-    "carry_paths": {
+    "worktree_copy_paths": {
       "type": "string",
       "multiple": true,
-      "title": "Paths to carry into worktrees",
-      "description": "Repo-relative paths to copy from the main checkout into a new worktree. Nothing is carried until you list something here. A good starting set is CLAUDE.md, .env, .mcp.json, .claude/skills, .claude/settings.json, .claude/settings.local.json, plus your own such as personal or docs/personal. Paths missing from a repo are skipped, so one list works across all your repos."
+      "title": "Paths to copy into worktrees",
+      "description": "Repo-relative paths the worktree gets its own copy of, so edits there stay there. Good for .env and anything else you may tune for one branch. Nothing is carried until you list something here or under the link option. Paths missing from a repo are skipped, so one list works across all your repos."
+    },
+    "worktree_link_paths": {
+      "type": "string",
+      "multiple": true,
+      "title": "Paths to symlink into worktrees",
+      "description": "Repo-relative paths the worktree symlinks instead of copying, so it always sees the current version and edits write back to the main checkout. Good for .claude/skills, .claude/settings.json, .claude/settings.local.json and personal notes. A git-ignore pattern matches a symlink only when written without a trailing slash - personal, not personal/ - and the hook tells you when a link lands unignored."
     }
   }
 }
