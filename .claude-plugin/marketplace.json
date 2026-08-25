@@ -14,6 +14,11 @@
       "name": "workflow",
       "source": "./plugins/workflow",
       "description": "Small helpers for the Claude Code workflow itself, such as skill-activation reminders and worktree setup"
+    },
+    {
+      "name": "harness",
+      "source": "./plugins/harness",
+      "description": "Tools for maintaining the Claude Code harness itself, such as turning a mistake or a repeated request into a concrete fix - a CLAUDE.md rule, a hook, or a patch to the plugin at fault"
     }
   ]
 }

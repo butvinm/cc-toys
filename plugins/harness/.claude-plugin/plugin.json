@@ -1,0 +1,9 @@
+{
+  "name": "harness",
+  "description": "Tools for maintaining the Claude Code harness itself, such as turning a mistake or a repeated request into a concrete fix - a CLAUDE.md rule, a hook, or a patch to the plugin at fault",
+  "version": "1.0.0",
+  "author": { "name": "Mikhail Butvin" },
+  "homepage": "https://github.com/butvinm/cc-toys",
+  "repository": "https://github.com/butvinm/cc-toys",
+  "license": "MIT"
+}

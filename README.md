@@ -15,6 +15,7 @@ Then install the plugins you want:
 ```
 /plugin install user-story@cc-toys
 /plugin install workflow@cc-toys
+/plugin install harness@cc-toys
 ```
 
 ### Updating
@@ -69,6 +70,16 @@ Keeps a worktree session as capable as the one you left. A fresh worktree checks
 Runs on PostToolUse for EnterWorktree. You give it two lists when enabling the plugin, and nothing is carried until you do. Paths you copy give the worktree its own version, so edits there stay there - `.env` and anything else you may tune for one branch. Paths you symlink stay live: the worktree always sees the current file and edits write back to the main checkout - `.claude/skills`, both `.claude/settings*.json`, `personal` notes. Neither ever overwrites a file already in the worktree, and anything a repo does not have is skipped, so one pair of lists covers every repo you work in.
 
 A git-ignore pattern matches a symlink only when written without a trailing slash - `personal`, not `personal/` - so the hook checks each link and tells you when one lands unignored and will show up as untracked.
+
+## harness (plugin)
+
+Tools for maintaining the Claude Code harness itself, such as turning a mistake or a repeated request into a concrete fix - a CLAUDE.md rule, a hook, or a patch to the plugin at fault.
+
+### improve (skill)
+
+Turns a Claude Code mistake, or a request you keep repeating, into a fix for whatever produced it - a CLAUDE.md rule, an edit to an existing skill, a hook, or a patch to the plugin actually at fault - instead of a one-off correction that happens again next time. It never edits a file itself: it diagnoses, proposes a recommendation, and only implements through a subagent once you approve.
+
+Invoke with `/harness:improve` or prompts like "that's the second time, fix the workflow for it" and "add this as a rule".
 
 ## License
 
