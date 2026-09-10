@@ -6,14 +6,6 @@
           { "type": "command", "command": "\"${CLAUDE_PLUGIN_ROOT}\"/hooks/skill-reminder.sh", "timeout": 10 }
         ]
       }
-    ],
-    "PostToolUse": [
-      {
-        "matcher": "EnterWorktree",
-        "hooks": [
-          { "type": "command", "command": "\"${CLAUDE_PLUGIN_ROOT}\"/hooks/worktree-sync.sh", "timeout": 30 }
-        ]
-      }
     ]
   }
 }

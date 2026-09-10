@@ -13,7 +13,7 @@
     {
       "name": "workflow",
       "source": "./plugins/workflow",
-      "description": "Small helpers for the Claude Code workflow itself, such as skill-activation reminders and worktree setup"
+      "description": "Small helpers for the Claude Code workflow itself, such as skill-activation reminders"
     }
   ]
 }
