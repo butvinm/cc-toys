@@ -54,21 +54,13 @@ _Real output of a run against [cc-grammar-coach](https://github.com/butvinm/cc-g
 
 ## workflow (plugin)
 
-Small helpers for the Claude Code workflow itself, such as skill-activation reminders and worktree setup.
+Small helpers for the Claude Code workflow itself, such as skill-activation reminders.
 
 ### skill-reminder (hook)
 
 Makes skill activation reliable: Claude often knows a relevant skill exists and still answers without invoking it, so this hook reminds it before every prompt to actually activate what applies.
 
 Runs on UserPromptSubmit.
-
-### worktree-sync (hook)
-
-Keeps a worktree session as capable as the one you left. A fresh worktree checks out tracked files only, so Claude starts there blind to the project's own skills and instructions; this copies them across as the worktree opens.
-
-Runs on PostToolUse for EnterWorktree. You give it two lists when enabling the plugin, and nothing is carried until you do. Paths you copy give the worktree its own version, so edits there stay there - `.env` and anything else you may tune for one branch. Paths you symlink stay live: the worktree always sees the current file and edits write back to the main checkout - `.claude/skills`, both `.claude/settings*.json`, `personal` notes. Neither ever overwrites a file already in the worktree, and anything a repo does not have is skipped, so one pair of lists covers every repo you work in.
-
-A git-ignore pattern matches a symlink only when written without a trailing slash - `personal`, not `personal/` - so the hook checks each link and tells you when one lands unignored and will show up as untracked.
 
 ## License
 
